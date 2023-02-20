@@ -1,0 +1,114 @@
+/*pongo h1 para que modifique a mi pagina web todo lo que este dentro de un h1*/
+
+h1 {
+    text-align: center;
+    /*posicion del texto*/
+    color: rgb(255, 255, 255);
+    /*color de letra */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /*tipo de letra*/
+    font-size: 45px;
+    /*tamaño de mi letra*/
+    margin: 0;
+}
+
+/*pongo h3 para que modifique a mi pagina web todo lo que este dentro de un h3*/
+h3 {
+    text-align: right;
+    color: blue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+}
+
+/*pongo h2 para que modifique a mi pagina web todo lo que este dentro de un h2*/
+h2 {
+    text-align: center;
+    color: rgb(26, 43, 192);
+    /*rgb son 3 tonalidades de colores para tener mas variedad de tonos*/
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    margin-top: 0;
+}
+
+/*p para que me modifique lo que haiga en los parrafos*/
+p {
+    text-align: center;
+    font-size: 18px;
+
+}
+
+/*footer para que modifique mi pie de pagina*/
+footer {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+
+/*uso un punto para decirle a css que sera una clase que podre ponerlo en html */
+
+/*la almohadilla # es solo para definir un id */
+
+/*defino mi clase para imagenes que haga que pasando el mouse por encima de cada una se haga mas pequeña*/
+.hover_imagenes:hover {
+    transform: scale(0.7);
+    /*a que escalo quiero que se hagan pequeñas*/
+}
+
+
+/*aqui modifico mi scrollbar*/
+
+/*aqui pongo el ancho que quiero para mi scrollbar*/
+body::-webkit-scrollbar {
+    width: 8px;
+    /*anchura del scrollbar*/
+}
+
+/*el thumb es el deslizador aqui puedo ponerle un color en especial*/
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(15, 60, 156);
+}
+
+/*creo una clase para mi tutulo */
+.titulo {
+    background-color: rgb(233, 153, 34);
+}
+
+/*un hover para cada vez que se pase el mouse por encima del titulo se haga un poco mas grande*/
+.move_titulos:hover {
+    transform: scale(0.9); /*escala de animacion*/
+}
+
+/*creamos un selector de id para esconder el texto*/
+#checkbox-informacion {
+    display: none; /*esconder un elemento le dice al navegador que no lo represente*/
+}
+
+/*creamos un id para el boton*/
+#boton {
+    display: block; /*esto es Un elemento de bloque es un elemento que ocupa el ancho máximo disponible.*/
+    background-color: rgba(0, 255, 64, 0.664); /*color*/
+    color: white; /*color de letra*/
+    font-size: 20px; /*tamaño de letra*/
+    padding: 20px; /*tamaño del espacio que ocupa */
+    cursor: pointer; /*con esto podemos hacer click para que nos aparezca el parrafo*/
+    width: 180px; /*tamaño*/
+}
+
+
+/*creamos un id para la informacion*/
+#informacion-oculta {
+    display: none;/*esconder un elemento le dice al navegador que no lo represente*/
+}
+
+/*aqui junto todo para que funcione 
+ya que si no estuviera solo estuviera el boton 
+pero no funcionaria */
+#checkbox-informacion:checked+#boton+#informacion-oculta {
+    display: block; /*esto es Un elemento de bloque es un elemento que ocupa el ancho máximo disponible.*/
+}
+
+/*creo una clase para poner color al texto que esta escondido*/
+.color_escondido{
+    background-color: antiquewhite;/*tipo de color*/
+}
