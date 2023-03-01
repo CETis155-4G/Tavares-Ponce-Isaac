@@ -1,0 +1,44 @@
+/*body es para fondo (lo general del archivo)*/
+body{
+    margin: 0;/*margenes en 0*/
+    padding: 0;   /*padding es un atributo dentro de los bordes definidos*/
+    font-family:Arial, Helvetica, sans-serif;/*tipo de letra*/
+    /*color lo creo difuminando en dos colores */
+    background: linear-gradient(150deg, orange, #b9935a ); 
+    /*esto para adaptar el color que quede justo*/
+    height: 100vh;
+}
+
+/*el estilo para el nav*/
+nav {
+    width: 100%; /*ancho*/
+    height: 15vh; /*altura*/
+    background-color: rgb(23, 122, 252); /*color*/
+}
+
+
+/*estilo para la lista*/
+ul {
+    float: right;  /*su posicion a la derecha*/
+    margin-right: 5%; /*margen derecho*/
+}
+
+/*junto para el nav ul y li*/
+nav ul li {
+    display: inline-block; /*dimensiones*/
+    line-height: 15px;/*altura de la casilla*/
+}
+
+/*aqui voy a modificar la etiqueta a para que sea como un boton*/
+a{
+    display: block; 
+    width: 100px; /*ancho*/
+    height: 20px; /*altura*/
+    font-family: Arial, Helvetica, sans-serif;/*tipo de letra*/
+    font-weight: 15px; /*grosor*/
+    background-color: orange; /*color del boton*/
+    border-radius: 10px; /*bordes*/
+    padding: 15px 40px; /*establece relleno en los 4 lados*/
+    color: white; /*color de letra*/
+    text-decoration: none; /*ninguno*/
+}
