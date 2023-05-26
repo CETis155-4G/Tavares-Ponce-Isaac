@@ -1,0 +1,188 @@
+/*el asterisco es un selector universal */
+*{
+    margin: 0; padding: 0; /*establece el margen para los cuatro lados*/
+    box-sizing: border-box;/*establece como se calcula el ancho y alto total de un elemento*/
+    font-family: Arial, Helvetica, sans-serif;/*tipo de letra*/
+    text-transform: capitalize;/*especifica el cambio entre mayúsculas y minúsculas del texto de un elemento*/
+    text-decoration: none;/*no causará ningún cambio; el párrafo entero seguirá subrayado*/
+
+}
+
+/*todo se va a modificar dentro de la etiqueta body*/
+body{
+    min-height: 100vh;/*100vh es el 100% del alto de la pantalla*/
+    background-color: rgb(218, 217, 217); /*establezco de fondo un color*/
+    /*background-size: cover;*/
+    background-position: center;/*posicion centro*/
+}
+
+/*todo se va a modificar dentro de la etiqueta header*/
+header{
+    position: fixed; /*dónde posicionarse al elemento*/
+    top: 0; left: 0; right: 0;/*posicionar un elemento en la esquina superior izquierda de su contenedor*/
+    background: #ffffff;/*establezco un color*/
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);/*para aplicar una sombra alrededor de un elemento*/
+    padding: 0px 7%;/*establecer el relleno de un elemento*/
+    display: flex;/*crear un contenedor flexible para los elementos dentro de él*/
+    align-items: center; /* se utiliza en contenedores flexibles para alinear verticalmente los elementos secundarios dentro del contenedor.*/
+    justify-content: space-between;/*utiliza en contenedores flexibles para distribuir horizontalmente los elementos secundarios con un espacio igual entre ellos*/
+    z-index: 1000;/*controlar el apilamiento o superposición de elementos*/
+}
+
+/*todo se va a modificar dentro de la etiqueta header la clase logo*/
+header .logo{
+    font-weight: bolder;/*establecer el grosor o peso de la fuente de un elemento de texto*/
+    font-size: 25px;/*tamaño de la fuente de un elemento de texto en píxeles*/
+    color: #333;/*color*/
+}
+
+/*todo se va a modificar dentro de la etiqueta header en la clase navbar y se modifica la etiqueta ul*/
+header .navbar ul{
+    list-style: none;/*elimina los estilos de viñeta o numeración que se aplican de forma predeterminada a las listas HTML.*/
+}
+
+/*todo se va a modificar dentro de la etiqueta header en la clase navbar y se modifica la etiqueta ul y li*/
+header .navbar ul li{
+    position: relative;/*posicionar un elemento en relación con su posición original*/
+    float: left;/*posicionar un elemento flotante en la parte izquierda de su contenedor*/
+}
+
+/*todo se va a modificar dentro de la etiqueta header en la clase navbar y se modifica la etiqueta ul , li y a */
+header .navbar ul li a{
+    font-size: 20px;/*tramaño de letra*/
+    padding: 20px;/*establecer el relleno*/
+    color: #333;/*color*/
+    display: block;/*establecer un elemento como un elemento de bloque.*/
+
+}
+
+/*todo se va a modificar dentro de la etiqueta header en la clase navbar y se modifica la etiqueta ul , li y le agregamos un efecto hover a la etiqueta a*/
+header .navbar ul li a:hover{
+    background:#2757b6 ;/*color*/
+    color: #fff;/*color*/
+}
+
+/*todo se va a modificar dentro de la etiqueta header en la clase navbar y se modifica la etiqueta ul , li y ul*/
+header .navbar ul li ul{
+    position: absolute;/*posicionar un elemento de forma absoluta en relación con el primer elemento posicionado o el elemento contenedor*/
+    left: 0;/*establecer la posición horizontal de un elemento posicionado*/
+    width: 200px;/*establecer el ancho*/
+    background: #fff;/*color*/
+    display: none;/*ocultar un elemento*/
+}
+
+/*todo se va a modificar dentro de la etiqueta header en la clase navbar y se modifica la etiqueta ul, li, ul y li*/
+header .navbar ul li ul li{
+    width: 100%;/*establecer el ancho de un elemento al 100% del ancho*/
+    border-top: 1px solid rgba(0, 0, 0, .1);/*establece un borde en la parte superior de un elemento*/
+}
+
+/*todo se va a modificar dentro de la etiqueta header en la clase navbar y se modifica la etiqueta ul, li, ul, li, ul*/
+header .navbar ul li ul li ul{
+    left: 200px;/*establecer la posición horizontal de un elemento posicionado*/
+    top: 0;/*establecer la posición vertical de un elemento posicionado*/
+}
+
+
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;/*establecer el valor por defecto de la propiedad "display" de un elemento*/
+}
+
+/*llamamos al id del input en html*/
+#menu-bar{
+    display: none;/*oculta un elemento*/
+}
+
+header label{
+    font-size: 20px; /*tamaño de letra*/
+    color: #333;/*color de letra*/
+    cursor: pointer;/*cambiar el aspecto del cursor */
+    display: none;/*oculta un elemento*/
+}
+
+
+/*una regla de los Media Queries en CSS*/
+/*aplicar estilos específicos cuando el ancho de la ventana del navegador*/
+@media(max-width:991px){
+
+    /*etiqueta header*/
+    header{
+        padding: 20px; /*establecer el relleno*/
+    }
+
+
+    /*todo se va a modificar dentro de la etiqueta header en la clase navbar*/
+    header label{
+        display: initial; /*establecer el valor por defecto de la propiedad "display" de un elemento*/
+    }
+
+    header .navbar{
+        position: absolute;/*posicionar un elemento de forma absoluta en relación con el primer elemento posicionado o el elemento contenedor*/
+        top:100%; left: 0; right: 0;/*posicionar un elemento dentro de su contenedor padre*/
+        background: #fff; /*color*/
+        border-top: 1px solid rgba(0, 0, 0, .1);/*establece un borde en la parte superior de un elemento*/
+        display: none;/*oculta un elemento*/
+    }
+
+    /*todo se va a modificar dentro de la etiqueta header en la clase navbar y etiquetas ul li*/
+    header .navbar ul li{
+        width: 100%;  /*ancho*/
+    }
+
+    /*todo se va a modificar dentro de la etiqueta header en la clase navbar y etiquetas ul li ul*/
+    header .navbar ul li ul{
+        position: relative; /*posicionar un elemento en relación con su posición original*/
+        width: 100%; /*ancho*/
+    }
+
+    /*todo se va a modificar dentro de la etiqueta header en la clase navbar y etiquetas ul li ul li*/
+    header .navbar ul li ul li{
+        background: #eee; /*color*/
+
+    }
+
+    /*todo se va a modificar dentro de la etiqueta header en la clase navbar y etiquetas ul li ul li ul*/
+    header .navbar ul li ul li ul{
+        width: 1005%; /*ancho*/
+        left: 0;/*establecer la posición horizontal de un elemento posicionado*/
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial; /*establecer el valor por defecto de la propiedad "display" de un elemento*/
+    }
+
+}
+
+/*una clase llamada section*/
+/*una clase llamada section*/
+.section {
+    background-color: rgb(255, 255, 255);/*color del contenedor*/
+    display: flex; /*establecer flexibilidad*/
+    flex-direction: column; /*establece la dirección en la que se apilan los elementos */
+    justify-content: center;/* alinear los elementos hijos horizontalmente dentro del contenedor*/
+    align-items: center;/*alinear los elementos hijos verticalmente dentro del contenedor*/
+    padding: 20px; /*establecer el espacio de relleno del contenedor*/
+    width: 90%; /*ancho*/
+    max-width: 750px; /*maximo del ancho*/
+    margin: 15px auto; /*establecer los márgenes del contenedor*/
+    border-radius: 10px; /*los bordes del contenedor redondos*/
+    margin-top: 90px; /*establecer el margen superior*/
+}
+
+
+/*clase section con h1*/
+.section h1 {
+    margin: 0;/*no habrá ningún espacio de margen alrededor del elemento*/
+    color: rgb(22, 135, 9); /*color de letra*/
+    font-size: 24px;/*tamaño de letra*/
+    text-align: center; /*se posiciona en el centro*/
+}
+
+/*clase section con la etiqueta p de html*/
+.section p {
+    color: rgb(0, 0, 0); /*color de letra*/
+    margin: 0;/*no habrá ningún espacio de margen alrededor del elemento*/
+    text-align: center; /*se posiciona en el centro*/
+}
